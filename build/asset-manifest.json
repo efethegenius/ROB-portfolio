@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fae999da.css",
+    "main.js": "/static/js/main.ae47bc1f.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/contact.png": "/static/media/contact.c112c732a13f7801568d.png",
+    "static/media/me.png": "/static/media/me.613c4f5ad3a17ce6cfa9.png",
+    "static/media/BENEDICTA-RAY-OKOYE-CV.pdf": "/static/media/BENEDICTA-RAY-OKOYE-CV.a1a3a58faf58f8ceca5b.pdf",
+    "index.html": "/index.html",
+    "main.fae999da.css.map": "/static/css/main.fae999da.css.map",
+    "main.ae47bc1f.js.map": "/static/js/main.ae47bc1f.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fae999da.css",
+    "static/js/main.ae47bc1f.js"
+  ]
+}
