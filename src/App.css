@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  cursor: none !important;
 }
 .App {
   min-height: 100vh;
@@ -357,13 +358,84 @@ p {
   .full-nav {
     display: flex !important;
     position: fixed;
-    background-color: #a3acff0f;
+    background-color: #a3acff34;
     backdrop-filter: blur(20px);
     top: 0;
+    z-index: 1;
   }
 }
 
 @media screen and (min-width: 900px) {
+  .cursor-container,
+.outer-cursor,
+.inner-cursor,
+.cursor {
+  z-index: 2 !important;
+}
+
+.full-nav p{
+  transition: all ease-in-out 0.4s;
+}
+
+.full-nav p:hover {
+  cursor: pointer !important;
+  background-color: #a3ccff;
+  color: white;
+  padding: 4px;
+  border-radius: 3px;
+}
+.full-nav:hover,
+.lists:hover {
+  cursor: default !important;
+}
+/* .outer-cursor {
+  width: 40px;
+  height: 40px;
+  border: 2px dashed #4943c0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  animation: rotation 3s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.animate__animated.animate__fadeInRight,
+.animate__animated.animate__fadeInLeft {
+  animation-delay: 3s;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff1a;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4943c0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */
+.inner-cursor {
+  width: 12px;
+  height: 12px;
+  background-color: #a3ccff;
+  position: absolute;
+  border-radius: 100px;
+}
   .process-container,
   .projects-container {
     display: grid;
