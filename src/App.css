@@ -358,7 +358,7 @@ p {
   .full-nav {
     display: flex !important;
     position: fixed;
-    background-color: #a3acff34;
+    background-color: #a3acff07;
     backdrop-filter: blur(20px);
     top: 0;
     z-index: 1;
