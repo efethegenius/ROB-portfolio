@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { HiOutlineArrowNarrowDown, HiOutlineMenuAlt3 } from "react-icons/hi";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { SlArrowDown } from "react-icons/sl";
 import Typewriter from "typewriter-effect";
 import { Link, animateScroll as scroll } from "react-scroll";
 import "animate.css";
 import Fade from "react-reveal/Fade";
+import { AuthContext } from "../helpers/AuthContext";
 
 export const Hero = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const { isDarkMode, setIsDarkMode } = useContext(AuthContext);
+
+  let darkModeStatus;
+  darkModeStatus = localStorage.getItem("dark-mode");
   return (
     <div className="hero-container">
       <div className={toggleMenu ? "menu show-menu" : "menu"}>
@@ -89,6 +95,31 @@ export const Hero = () => {
       </div>
       <nav className="small-nav">
         <h1>R-O B</h1>
+        {darkModeStatus === "enabled" ? (
+          <MdLightMode
+            onClick={() => {
+              setIsDarkMode(!isDarkMode);
+              localStorage.setItem("dark-mode", "disabled");
+            }}
+            className="mode-switch"
+          />
+        ) : darkModeStatus === "disabled" ? (
+          <MdDarkMode
+            onClick={() => {
+              setIsDarkMode(!isDarkMode);
+              localStorage.setItem("dark-mode", "enabled");
+            }}
+            className="mode-switch"
+          />
+        ) : (
+          <MdDarkMode
+            onClick={() => {
+              setIsDarkMode(!isDarkMode);
+              localStorage.setItem("dark-mode", "enabled");
+            }}
+            className="mode-switch"
+          />
+        )}
         <HiOutlineMenuAlt3
           className="btn-menu"
           onClick={() => {
@@ -176,11 +207,39 @@ export const Hero = () => {
               Contact
             </p>
           </Link>
+          {darkModeStatus === "enabled" ? (
+            <MdLightMode
+              onClick={() => {
+                setIsDarkMode(!isDarkMode);
+                localStorage.setItem("dark-mode", "disabled");
+              }}
+              className="mode-switch"
+            />
+          ) : darkModeStatus === "disabled" ? (
+            <MdDarkMode
+              onClick={() => {
+                setIsDarkMode(!isDarkMode);
+                localStorage.setItem("dark-mode", "enabled");
+              }}
+              className="mode-switch"
+            />
+          ) : (
+            <MdDarkMode
+              onClick={() => {
+                setIsDarkMode(!isDarkMode);
+                localStorage.setItem("dark-mode", "enabled");
+              }}
+              className="mode-switch"
+            />
+          )}
         </div>
       </nav>
       <Fade top cascade>
         <h1 className="intro">
-          Hi, I'm <span className="name">Benedicta</span>{" "}
+          Hi, I'm{" "}
+          <span className={darkModeStatus === "enabled" ? "dark-name" : "name"}>
+            Benedicta
+          </span>{" "}
         </h1>
       </Fade>
 
@@ -207,7 +266,15 @@ export const Hero = () => {
           }}
         />
       </h2>
-      <SlArrowDown className="hero-down" />
+      <Link
+        to="about-link"
+        smooth={true}
+        duration={2000}
+        spy={true}
+        activeClass="active"
+      >
+        <SlArrowDown className="hero-down" />
+      </Link>
     </div>
   );
 };

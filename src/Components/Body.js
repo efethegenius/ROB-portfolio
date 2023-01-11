@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { projects } from "../data";
 import {
   SiFigma,
@@ -29,9 +29,15 @@ import resume from "./Assets/BENEDICTA-RAY-OKOYE-CV.pdf";
 import quays from "./Assets/quays.png";
 import vinera from "./Assets/vinera.png";
 import magenta from "./Assets/magenta.png";
+import { AuthContext } from "../helpers/AuthContext";
 
 export const Body = () => {
   const [allProjects, setAllProject] = useState(projects);
+  const { isDarkMode, setIsDarkMode } = useContext(AuthContext);
+
+  let darkModeStatus;
+  darkModeStatus = localStorage.getItem("dark-mode");
+
   return (
     <div className="body-container">
       <div className="body-header about-link">
@@ -63,16 +69,29 @@ export const Body = () => {
                 duration={2000}
                 spy={true}
                 activeClass="active"
+                className={
+                  darkModeStatus === "enabled"
+                    ? "dark-btns"
+                    : darkModeStatus === "disabled"
+                    ? "light-btns"
+                    : "light-btns"
+                }
               >
-                <a className="btn-contact-me">Contact Me</a>
+                <p>Contact Me</p>
               </Link>
               <a
-                className="btn-resume"
                 href={resume}
                 target="_blank"
                 rel="noopener"
+                className={
+                  darkModeStatus === "enabled"
+                    ? "dark-btns"
+                    : darkModeStatus === "disabled"
+                    ? "light-btns"
+                    : "light-btns"
+                }
               >
-                My Resume
+                <p>My Resume</p>
               </a>
             </div>
           </div>
@@ -80,7 +99,13 @@ export const Body = () => {
       </div>
 
       <div className="item-container projects mini-proj">
-        <div className="body-header project-link">
+        <div
+          className={
+            isDarkMode
+              ? "body-header project-link dark-mode-white"
+              : "body-header project-link"
+          }
+        >
           <h2>Works...</h2>
         </div>
         <div className=" projects-container">
