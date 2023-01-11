@@ -12,10 +12,12 @@
   align-items: center;
   flex-direction: column;
   overflow: hidden;
+  transition: all ease-in-out 0.3s;
 }
 .dark-mode {
   background-color: black;
   color: white !important;
+  transition: all ease-in-out 0.3s;
 }
 
 .dark-mode-white {
@@ -275,7 +277,7 @@ p {
     11.8px 7.4px 25.5px -12px rgba(0, 0, 0, 0.042),
     22.1px 13.8px 47.6px -12px rgba(0, 0, 0, 0.05),
     53px 33px 114px -12px rgba(0, 0, 0, 0.07);
-    border: 0.5px solid rgba(128, 128, 128, 0.317);
+  border: 0.5px solid rgba(128, 128, 128, 0.317);
 }
 
 .project-container img {
