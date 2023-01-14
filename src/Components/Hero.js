@@ -94,7 +94,13 @@ export const Hero = () => {
         </Link>
       </div>
       <nav className="small-nav">
-        <h1>R-O B</h1>
+        {/* <h1>R-O B</h1> */}
+        <HiOutlineMenuAlt3
+          className="btn-menu"
+          onClick={() => {
+            setToggleMenu(!toggleMenu);
+          }}
+        />
         {darkModeStatus === "enabled" ? (
           <MdLightMode
             onClick={() => {
@@ -120,16 +126,17 @@ export const Hero = () => {
             className="mode-switch"
           />
         )}
-        <HiOutlineMenuAlt3
+        {/* <HiOutlineMenuAlt3
           className="btn-menu"
           onClick={() => {
             setToggleMenu(!toggleMenu);
           }}
-        />
+        /> */}
       </nav>
 
       <nav className="full-nav">
-        <h1>R-O B</h1>
+        {/* <h1>R-O B</h1> */}
+        <h1></h1>
 
         <div className="lists">
           <Link
