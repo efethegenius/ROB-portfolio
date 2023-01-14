@@ -357,12 +357,12 @@ p {
   margin-top: 10px;
 }
 .socials-container a {
-  color: black;
+  color: #a3ccff !important;
 }
 
 .email-me {
   text-decoration: none;
-  color: rgb(0, 68, 255);
+  color: #a3ccff;
   font-weight: 500;
 }
 
@@ -583,7 +583,7 @@ p {
   .socials-container a {
     font-size: 1.4rem;
     margin-top: 10px;
-    color: black;
+    color: #a3ccff;
   }
   .contact-foot img {
     width: 70%;
