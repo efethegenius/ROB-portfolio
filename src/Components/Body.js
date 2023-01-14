@@ -309,12 +309,12 @@ export const Body = () => {
                 <a href="/" target="_blank" rel="noreferrer noopener">
                   <FaTwitter />
                 </a>
-                <a href="/" target="_blank" rel="noreferrer noopener">
+                {/* <a href="/" target="_blank" rel="noreferrer noopener">
                   <FaBehance />
                 </a>
                 <a href="/" target="_blank" rel="noreferrer noopener">
                   <FaDribbble />
-                </a>
+                </a> */}
               </div>
             </div>
           </Fade>
