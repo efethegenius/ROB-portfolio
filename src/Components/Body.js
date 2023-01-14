@@ -6,6 +6,7 @@ import {
   SiAdobeillustrator,
   SiAdobeindesign,
   SiSketch,
+  SiCanva,
 } from "react-icons/si";
 import { SlNote } from "react-icons/sl";
 import { RxBoxModel } from "react-icons/rx";
@@ -194,8 +195,9 @@ export const Body = () => {
           <div className="skillsets-container">
             <SiFigma />
             <SiAdobexd />
-            <SiAdobeillustrator />
-            <SiAdobeindesign />
+            <SiCanva />
+            {/* <SiAdobeillustrator />
+            <SiAdobeindesign /> */}
             {/* <SiSketch /> */}
           </div>
           <div className="skill-list">
