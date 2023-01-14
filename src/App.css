@@ -122,14 +122,15 @@
   background-color: #a3ccff;
 }
 .dark-name:hover {
-  background-color: #fffaa3 !important;
+  background-color: #a3ccff !important;
   color: black !important;
 }
 
 .dark-name {
   transition: all ease-in-out 0.2s;
   cursor: pointer;
-  background-color: #a3ccff !important;
+  background-color: #fffaa3 !important;
+  color: black;
 }
 
 nav {
@@ -302,6 +303,7 @@ p {
   flex-direction: row;
   font-size: 2rem;
   margin: 20px 0;
+  max-width: 900px;
 }
 
 .skill-list {
@@ -310,6 +312,7 @@ p {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  max-width: 900px;
 }
 .skill-list p {
   font-size: 0.6rem !important;

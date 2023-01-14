@@ -196,7 +196,7 @@ export const Body = () => {
             <SiAdobexd />
             <SiAdobeillustrator />
             <SiAdobeindesign />
-            <SiSketch />
+            {/* <SiSketch /> */}
           </div>
           <div className="skill-list">
             <p>Sitemap</p>
